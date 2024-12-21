@@ -52,13 +52,11 @@ This is a library that allows you to generate random data. It can be used to fil
 To start testing, you need to click "run".
 A website was used to generate a temporary email address. www.1secmail.com
 
-The project contains two folders __pages__ and __tests__, as well as files conftest.py and pytest.ini.
+The project contains files:
 
-* conftest.py - a fixture for working with the browser.
+* conftest.py - a fixture for working with the browser;
 
-* pytest.ini markers for parameterization.
-
-The __pages__ folder contains the following files:
+* pytest.ini markers for parameterization;
 
 * registration_email.py - GET requests to a virtual mailbox to receive a valid email address and a code for registering on the website and password recovery;
 
@@ -70,13 +68,11 @@ The __pages__ folder contains the following files:
 
 * locators.py - XPath and CSS locators of web site elements;
 
-* settings.py - data used in the test process.
-
-The __tests__ folder contains the following files:
+* settings.py - data used in the test process;
 
 * test_registr_positive - positive tests of the registration page;
 
-* test_auth_page_positive - positive authorization page tests
+* test_auth_page_positive - positive authorization page tests.
 
 **To restore the password, you must enter the captcha manually, as well as to verify password and email authorization.**
 
