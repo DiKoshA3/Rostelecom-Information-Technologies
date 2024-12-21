@@ -16,15 +16,15 @@ Testing the Rostelecom website:
 -by phone number, "Number" button;<br />
 -by phone number, "Mail" button;<br />
 -by phone number, "Login" button;<br />
--by phone number, the "Personal account" button.
-2) Authorization by time code.
-3) Password recovery:
--type of password recovery;
--restore the client's password by phone number, the "By phone number" button;
--restore the client's password by phone number, the "By e-mail" button.
-4) Registration:
--basic steps;
--with the setting (Block/Disable cookies).
+-by phone number, the "Personal account" button.<br />
+2) Authorization by time code.<br />
+3) Password recovery:<br />
+-type of password recovery;<br />
+-restore the client's password by phone number, the "By phone number" button;<br />
+-restore the client's password by phone number, the "By e-mail" button.<br />
+4) Registration:<br />
+-basic steps;<br />
+-with the setting (Block/Disable cookies).<br />
 Automated site testing https://b2c.passport.rt.ru 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
