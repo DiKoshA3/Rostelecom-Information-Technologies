@@ -38,11 +38,16 @@ The following test design techniques were used when testing the site:
 
 The PyCharm libraries used in testing:
 
-* requests
-* python-dotenv
-* pytest
-* selenium
-* faker
+* requests <br />
+The requests library allows you to send requests of various levels of complexity to web services and receive appropriate responses from them. It is needed to receive data from the server.
+* python-dotenv <br />
+In order not to manually set environment variables every time the terminal is started again, use this library. It allows you to load environment variables from a file **.env** in the root directory of the application.
+* pytest <br />
+The standard pytest framework makes it easy to write small, intuitive tests and scales to support complex functional testing of applications and libraries.
+* selenium <br />
+This library allows you to write automated tests, supports all major browsers, and tests can be written in many programming languages, as well as run on different platforms.
+* faker <br />
+This is a library that allows you to generate random data. It can be used to fill in tables in the database, build correct XML documents, and generate JSON responses for REST.
 
 To start testing, you need to click "run".
 A website was used to generate a temporary email address. www.1secmail.com
