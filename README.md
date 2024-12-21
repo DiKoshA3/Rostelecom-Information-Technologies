@@ -10,7 +10,7 @@
 ## About The Project
 
 
-Testing the Rostelecom website: 
+Testing the Rostelecom website: <br />
 1)Login and password authorization: <br />
 -by login and password;<br />
 -by phone number, "Number" button;<br />
