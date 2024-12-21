@@ -11,11 +11,11 @@
 
 
 Testing the Rostelecom website: 
-1)Login and password authorization:
--by login and password;
--by phone number, "Number" button;
--by phone number, "Mail" button;
--by phone number, "Login" button;
+1)Login and password authorization: <br />
+-by login and password;<br />
+-by phone number, "Number" button;<br />
+-by phone number, "Mail" button;<br />
+-by phone number, "Login" button;<br />
 -by phone number, the "Personal account" button.
 2) Authorization by time code.
 3) Password recovery:
