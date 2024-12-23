@@ -3,82 +3,75 @@
 <div id="header" align="center">
   <img src="https://s14.stc.yc.kpcdn.net/share/i/12/13143964/wr-960.webp" "Optional title"/>
 </div>
-  <h3 align="center">Rostelecom Information Technologies</h3>
+  <h3 align="center">Дипломный проект: реальный кейс компании "Ростелеком Информационные технологии"</h3>
 
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
 
-Testing the Rostelecom website: <br />
-1) Login and password authorization: <br />
--by login and password;<br />
--by phone number, "Number" button;<br />
--by phone number, "Mail" button;<br />
--by phone number, "Login" button;<br />
--by phone number, the "Personal account" button.<br />
-2) Authorization by time code.<br />
-3) Password recovery:<br />
--type of password recovery;<br />
--restore the client's password by phone number, the "By phone number" button;<br />
--restore the client's password by phone number, the "By e-mail" button.<br />
-4) Registration:<br />
--basic steps;<br />
--with the setting (Block/Disable cookies).<br />
-Automated site testing https://b2c.passport.rt.ru 
+Тестирование сайта Ростелекома: <br />
+1) Авторизация по логину и паролю: <br />
+-по логину и паролю;<br />
+-по номеру телефона, кнопка "Номер";<br />
+--по номеру телефона, кнопка "Email";
+-по номеру телефона, кнопка "Войти";
+-по номеру телефона, кнопка "Личный кабинет".
+2) Авторизация по тайм-коду.
+3) Восстановление пароля:<br />
+-тип восстановления пароля;<br />
+-восстановить пароль клиента по номеру телефона, кнопка "По номеру телефона";<br />
+-восстановить пароль клиента по номеру телефона, нажав кнопку "По электронной почте".
+4) Регистрация:
+-основные шаги;
+-с помощью настройки (Блокировать/отключать cookies).<br />
+Автоматическое тестирование сайта https://b2c.passport.rt.ru 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-The following test design techniques were used when testing the site:
+При тестировании сайта использовались следующие методы разработки тестов:
 
-* boundary value analysis;
-* division into equivalence classes;
-* testing states and transitions.
+* анализ граничных значений;
+* разделение на классы эквивалентности;
+* Тестирование состояний и переходов.
 
 
-The PyCharm libraries used in testing:
+Библиотеки PyCharm, использованные при тестировании:
 
-* __requests__ <br />
-The requests library allows you to send requests of various levels of complexity to web services and receive appropriate responses from them. It is needed to receive data from the server.
-* __python-dotenv__ <br />
-In order not to manually set environment variables every time the terminal is started again, use this library. It allows you to load environment variables from a file **.env** in the root directory of the application.
+* __pageobject__ <br />
+Это шаблон проектирования, который используется при написании автоматизированных тестов.
 * __pytest__ <br />
-The standard pytest framework makes it easy to write small, intuitive tests and scales to support complex functional testing of applications and libraries.
+Стандартный фреймворк pytest позволяет легко создавать небольшие, интуитивно понятные тесты и шкалы для поддержки комплексного функционального тестирования приложений и библиотек.
 * __selenium__ <br />
-This library allows you to write automated tests, supports all major browsers, and tests can be written in many programming languages, as well as run on different platforms.
-* __faker__ <br />
-This is a library that allows you to generate random data. It can be used to fill in tables in the database, build correct XML documents, and generate JSON responses for REST.
+Эта библиотека позволяет писать автоматизированные тесты, поддерживает все основные браузеры, а тесты могут быть написаны на многих языках программирования, а также запускаться на разных платформах.
+* __faker__
+Это библиотека, которая позволяет генерировать случайные данные. Ее можно использовать для заполнения таблиц в базе данных, создания корректных XML-документов и генерации ответов в формате JSON для REST.
 
-To start testing, you need to click "run".
-A website was used to generate a temporary email address. www.1secmail.com
+Чтобы начать тестирование, вам нужно нажать через __Open Folder__ загрузить свой проект, далее открыть терминал через вкладку __Terminal__ и нажать __New Terminal__, необходимо загрузить библиотеки, если они отсутствуют, с помощью команды __pip install *библиотека*__.
+Для создания временного адреса электронной почты использовался веб-сайт. www.1secmail.com
 
-The project contains files:
+Проект содержит файлы:
 
-* conftest.py - a fixture for working with the browser;
+* conftest.py - содержит фикстуры, для работы с Selenium драйвером, настройками браузера, для информативного вывода отчетов в терминале;
 
-* pytest.ini markers for parameterization;
+* config.py - содержит информационные данные;
 
-* registration_email.py - GET requests to a virtual mailbox to receive a valid email address and a code for registering on the website and password recovery;
+* auth_page.py - содержит методы проверок формы авторизации;;
 
-* config.py - the main URL of the tested site;
+* base_page.py - базовый класс, который содержит объект страницы и функции для выполнения тестов;
 
-* auth.py - wrapper functions for locators, distributed by classes depending on the subject of the tests;
+* elements.py - класс с методами для работы с элементами страницы;
 
-* base.py - functions for applying explicit expectations to locators, getting the main page of the site and the path of the current page;
+* reg_page.py - содержит методы проверок формы регистрации;
 
-* locators.py - XPath and CSS locators of web site elements;
+* test_reg_page - положительные тесты страницы регистрации;
 
-* settings.py - data used in the test process;
+* test_auth_page - запуск тестов формы авторизации;
 
-* test_registr_positive - positive tests of the registration page;
-
-* test_auth_page_positive - positive authorization page tests.
-
-**To restore the password, you must enter the captcha manually, as well as to verify password and email authorization.**
+* conftest.py - условия для выполнения тестов.
 
 
-
-Test cases, bug reports, and a checklist are available on Google Drive https://drive.google.com/drive/folders/1BbX-KV39YtDE2c98BynPZShf7zAqvLKq?usp=drive_link
+Тестовые примеры, отчеты об ошибках и контрольный список доступны на Google Диске https://drive.google.com/drive/folders/1BbX-KV39YtDE2c98BynPZShf7zAqvLKq?usp=drive_link
 
 
 
